@@ -8,9 +8,12 @@ class neuralNetwork:
         self.hidden_nodes = hidden_nodes
         self.output_nodes = output_nodes
         self.learning_rate = learning_rate
-        # Hier würden normalerweise die Gewichte initialisiert werden
-        # self.weights_input_hidden = np.random.randn(self.hidden_nodes, self.input_nodes)
-        # self.weights_hidden_output = np.random.randn(self.output_nodes, self.hidden_nodes)
+        
+        # Initialisierung der Gewichtsmatrizen basierend auf dem Screenshot
+        # self.wih: Gewichte zwischen Input- und Hidden-Layer
+        self.wih = np.random.normal(0.0, pow(self.input_nodes, -0.5), (self.hidden_nodes, self.input_nodes))
+        # self.who: Gewichte zwischen Hidden- und Output-Layer
+        self.who = np.random.normal(0.0, pow(self.hidden_nodes, -0.5), (self.output_nodes, self.hidden_nodes))
 
     def train(self):
         print("I´am training")
