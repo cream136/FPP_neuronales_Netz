@@ -18,5 +18,20 @@ class neuralNetwork:
     def train(self):
         print("I´am training")
 
-    def query(self):
-        print("I ask…")
+    def query(self, inputs_list):
+        # Konvertiere die Eingabeliste in ein NumPy-Array
+        inputs = np.array(inputs_list)
+
+        # 1. Berechnung der Hidden-Layer Aktivierungen
+        # Matrixmultiplikation der Gewichte (wih) mit den Eingaben
+        hidden_inputs = np.dot(self.wih, inputs)
+        # Anwendung der Sigmoid-Aktivierungsfunktion
+        hidden_outputs = special.expit(hidden_inputs)
+
+        # 2. Berechnung der Output-Layer Aktivierungen
+        # Matrixmultiplikation der Gewichte (who) mit den Hidden-Outputs
+        final_inputs = np.dot(self.who, hidden_outputs)
+        # Anwendung der Sigmoid-Aktivierungsfunktion
+        final_outputs = special.expit(final_inputs)
+
+        return final_outputs
