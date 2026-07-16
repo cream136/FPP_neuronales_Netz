@@ -3,5 +3,10 @@ obj/
 
 # IDE-Benutzereinstellungen und Caches
 .vs/
-.vscode/
 *.user
+
+# Von VS Code nur die Projektkonfiguration versionieren,
+# nicht die persoenlichen Einstellungen
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
