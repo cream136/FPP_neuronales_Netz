@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build NeuronalesNetz",
+      "type": "shell",
+      "command": "dotnet",
+      "args": [
+        "build",
+        "${workspaceFolder}/csharp/NeuronalesNetz/NeuronalesNetz.csproj"
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run NeuronalesNetz",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build NeuronalesNetz",
+      "program": "${workspaceFolder}/csharp/NeuronalesNetz/bin/Debug/net10.0/NeuronalesNetz.dll",
+      "cwd": "${workspaceFolder}/csharp/NeuronalesNetz",
+      "console": "internalConsole",
+      "stopAtEntry": false
+    }
+  ]
+}
