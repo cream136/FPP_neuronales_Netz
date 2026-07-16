@@ -7,6 +7,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>NeuronalesNetz</RootNamespace>
     <Optimize>true</Optimize>
+    <!-- Umgeht die WriteCodeFragment-Task, die unter manchen IDE-MSBuild-Hosts
+         System.CodeDom nicht laden kann. Erzeugt nur Assembly-Attribute. -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
 </Project>
