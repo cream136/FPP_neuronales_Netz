@@ -91,7 +91,7 @@ hidden_nodes = 100
 output_nodes = 10
 
 # learning rate
-learning_rate = 0.2
+learning_rate = 0.16
 
 # create instance of neural network
 n = neuralNetwork(input_nodes,hidden_nodes,output_nodes, learning_rate)
